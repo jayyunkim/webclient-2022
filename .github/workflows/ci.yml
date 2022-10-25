@@ -31,12 +31,32 @@ jobs:
         run: mvn -B package --file pom.xml
         
       - name: List out what's in current directory.
-        run: ls -la
+        run: |
+         if [ "$RUNNER_OS" == "Linux" ]; then
+              ls -la
+         elif [ "$RUNNER_OS" == "Windows" ]; then
+              dir
+         elif [ "$RUNNER_OS" == "macOS" ]; then
+              ls -la
+         else
+              echo "$RUNNER_OS not supported"
+              exit 1
+         fi
+        shell: bash
         
       - name: What's in target folder?
         run: |
-          cd target
-          ls -la
+         if [ "$RUNNER_OS" == "Linux" ]; then
+              ls -la
+         elif [ "$RUNNER_OS" == "Windows" ]; then
+              dir
+         elif [ "$RUNNER_OS" == "macOS" ]; then
+              ls -la
+         else
+              echo "$RUNNER_OS not supported"
+              exit 1
+         fi
+        shell: bash
 
 #publish:
   #needs: build

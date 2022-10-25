@@ -47,10 +47,13 @@ jobs:
       - name: What's in target folder?
         run: |
          if [ "$RUNNER_OS" == "Linux" ]; then
+              cd target
               ls -la
          elif [ "$RUNNER_OS" == "Windows" ]; then
+              cd target
               dir
          elif [ "$RUNNER_OS" == "macOS" ]; then
+              cd target
               ls -la
          else
               echo "$RUNNER_OS not supported"

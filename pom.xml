@@ -41,6 +41,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>jykwebclient2022</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -15,3 +15,9 @@
     create a docker image.
     3. Also simplified Dockerfile for now, kept the fancy copy-pasta in the Dockerfile.fancy in case I want to reference
     it later.
+
+10-26-2022
+    1. WE HAVE SUCCEEDED IN CREATING THE DOCKER IMAGE AND PUSHING TO DOCKERHUB.
+    2. Turns out macOS is a bitch, doesn't support Docker in the VM, so we can't use the login-action@v2.
+    3. Removed Windows because it was taking too long, but it's also a bitch and can't use the prebuilt actions.
+    4. But success, we are halfway on the cloud.

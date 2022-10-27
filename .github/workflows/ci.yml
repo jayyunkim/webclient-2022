@@ -14,7 +14,8 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] ## , macOS-latest] <== This mofo doesn't have docker =.=
+        os: [ubuntu-latest]
+        #, windows-latest, macOS-latest] Windows expelled for being slow AF, macOS doesn't support Docker, like WHAT???
 
     steps:
       - name: Step 1 - Checkout github repository
